@@ -75,6 +75,26 @@ export default{
                 itens:await baseFetch(`/discover/movie?witch_genres=99&language=pt-BR&api_key=${API_KEY}`)
             },
         ]
+    },
+
+    getMovieInfo: async(movieId,type) =>{
+        let info = {}
+
+        if(movieId){
+            switch(type){
+                case 'movie': 
+                info = await baseFetch(`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`)
+                
+                break;
+                case 'tv':
+                    info = await baseFetch(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`)
+                    
+                break;
+            }
+        }
+
+        return info
+
     }
 
 }

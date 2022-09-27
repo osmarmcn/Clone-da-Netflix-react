@@ -1,0 +1,24 @@
+.movies{
+    margin-bottom:30px ;
+
+}
+.movies h2{
+    margin: 0px 0px 0px 30px;
+}
+.movies-listArea{
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+.movies-itens{
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+.movies-itens img{
+    width: 100%;
+    transform: scale(0.8);
+    transition: all ease 0.5s;
+}
+.movies-itens img:hover{
+    transform: scale(1);
+}

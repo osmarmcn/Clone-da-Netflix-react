@@ -1,0 +1,94 @@
+.destaque{
+    height: 100vh;
+}
+
+.destaque-vertical{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.destaque-horizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #111 20%, transparent 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+
+
+}
+
+.destaque-nome{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.destaque-info{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.destaque-pontos, 
+.destaque-ano, 
+.destaque-seasons{
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.destaque-pontos{
+    color:#46d369 ;
+   
+}
+
+.destaque-descricao{
+    margin-top: 15px;
+    font-size: 20px;
+    color: #999;
+    max-width: 40%;
+}
+
+.destaque-button{
+    margin-top: 15px;
+}
+
+.destaque-white,
+.destaque-black{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    opacity: 1;
+    transition: all ease 0.4s;
+
+}
+
+.destaque-white:hover,
+.destaque-black:hover{
+    opacity: 0.7;
+
+}
+
+.destaque-white{
+    background-color: white;
+    color: black;
+
+}
+
+.destaque-black{
+    background-color: #333;
+    color: white;
+
+}
+
+.destaque-genero{
+    margin-top: 15px;
+    font-size: 18px;
+    color: #999;
+
+}
