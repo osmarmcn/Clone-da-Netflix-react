@@ -3,6 +3,7 @@ import React, {useEffect,useState}from 'react'
 import Tmdb from './Tmdb'
 import Movies from './componentes/movies'
 import Destaque from './componentes/destaque'
+import Header from './componentes/header'
 
 import "./App.css"
 
@@ -37,6 +38,7 @@ function App() {
 
   return (
     <div className="page">
+      <Header/>
       {destaqueData &&
         <Destaque item={destaqueData}/>
       }
