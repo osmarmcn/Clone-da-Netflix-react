@@ -1,5 +1,10 @@
 import React, {useEffect,useState}from 'react'
+
 import Tmdb from './Tmdb'
+import Movies from './componentes/movies'
+
+import "./App.css"
+
 
 
 
@@ -18,8 +23,15 @@ function App() {
   },[])
 
   return (
-    <div>
-      <h1>ola</h1>
+    <div className="page">
+      <section className="list">
+        {listMovies.map((item,key)=>(
+          <Movies key={key} title={item.title} itens={item.itens}/>
+
+        ))}
+      </section>
+      destaque
+      rodapé
       
     </div>
   )
