@@ -14,6 +14,7 @@ function App() {
 
   const [listMovies, setListMovies] = useState([])
   const [destaqueData, setDestaqueData] = useState(null)
+  const [blackHeader,setBlackHeader] = useState (true)
 
   useEffect(() =>{
     const loadAll = async ()=>{
@@ -36,9 +37,25 @@ function App() {
 
   },[])
 
+  useEffect(() =>{
+    const scrollListener = () =>{
+      if(scrollY > 10){
+        setBlackHeader(true)
+      }else{
+        setBlackHeader(false)
+      }
+
+    }
+    addEventListener('scroll',scrollListener)
+    return () =>{
+      removeEventListener('scroll', scrollListener)
+    }
+
+  },[])
+
   return (
     <div className="page">
-      <Header/>
+      <Header black={blackHeader}/>
       {destaqueData &&
         <Destaque item={destaqueData}/>
       }
@@ -50,8 +67,9 @@ function App() {
 
         ))}
       </section>
-      destaque
-      rodapé
+      <footer>
+        
+      </footer>
       
     </div>
   )

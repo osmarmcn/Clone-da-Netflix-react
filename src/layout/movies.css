@@ -2,8 +2,12 @@
     margin-bottom:30px ;
 
 }
-.movies h2{
-    margin: 0px 0px 0px 30px;
+.movies-h2{
+    margin: 0px 0px 0px 50px;
+}
+
+.movies-list{
+    transition: all ease 0.5s;
 }
 .movies-listArea{
     overflow-x: hidden;
@@ -22,3 +26,34 @@
 .movies-itens img:hover{
     transform: scale(1);
 }
+
+.movies-left,
+.movies-rigth{
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.movies-left{
+    left: 0;
+}
+
+.movies-rigth{
+    right: 0;
+
+}
+
+.movies:hover .movies-left,
+.movies:hover .movies-rigth{
+    opacity: 3;
+
+}
+
