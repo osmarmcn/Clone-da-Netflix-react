@@ -3,7 +3,7 @@
 
 }
 .movies-h2{
-    margin: 0px 0px 0px 50px;
+    margin: 0px 0px 0px 20px;
 }
 
 .movies-list{
@@ -39,21 +39,32 @@
     justify-content: center;
     overflow: hidden;
     cursor: pointer;
-    opacity: 1;
+    opacity: 0;
+    transition: all ease 0.3s;
+
 }
 
 .movies-left{
     left: 0;
+   
 }
 
 .movies-rigth{
     right: 0;
+    
 
 }
 
-.movies:hover .movies-left,
-.movies:hover .movies-rigth{
-    opacity: 3;
+ .movies-left:hover,
+.movies-rigth:hover{
+    opacity: 2;
 
 }
 
+
+@media (max-width: 760px){
+    .movieRow-left,
+    .movieRow-right {
+        opacity: 1;
+    }
+}

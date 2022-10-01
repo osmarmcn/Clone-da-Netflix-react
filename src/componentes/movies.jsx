@@ -5,7 +5,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 function Movies({title, itens}){
 
-    const[scrollX,setScrollX] = useState(-400)
+    const[scrollX,setScrollX] = useState(0)
 
     const handleLeftArrow = () =>{
         let x = scrollX + Math.round(innerWidth/2)
@@ -17,14 +17,14 @@ function Movies({title, itens}){
     }
 
     const handleRigthArrow = () =>{
-        const windowWidth = Math.round(window.innerWidth / 2);
-        let x = scrollX - windowWidth;
-        const max = (-1 * itens.results.length * 250) + (2 * windowWidth) - 60;
-        if( x < max ){
-            x = max;
+        let x = scrollX - Math.round(innerWidth / 2);
+        let listW = itens.results.length * 150;
+        if(window.innerWidth - listW > x){
+            x = (window.innerWidth - listW) - 30;
         }
-
         setScrollX(x);
+
+        
     }
 
 

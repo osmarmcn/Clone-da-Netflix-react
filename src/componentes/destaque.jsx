@@ -10,6 +10,11 @@ const Destaque = ({item}) =>{
         genres.push(item.genres[i].name)
     }
 
+    let descr = item.overview;
+    if(descr.length > 200){
+        descr = descr.substring(0, 200)  + '...';
+     }
+
     return(
         <section className="destaque" style={{
             backgroundSize:'cover',
@@ -22,7 +27,8 @@ const Destaque = ({item}) =>{
                         {item.original_name}
                     </div>
                     <div className="destaque-info">
-                        <div className="destaque-pontos">               {item.vote_average}
+                        <div className="destaque-pontos">
+                            {item.vote_average}
                         </div>
                         <div className="destaque-ano">
                             {firstDate.getFullYear()}
@@ -32,7 +38,7 @@ const Destaque = ({item}) =>{
                         </div>
                     </div>
                     <div className="destaque-descricao">
-                        {item.overview}
+                        {descr}
                     </div>
                     <div className="destaque-button">
                         <a href={`/watch/${item.id}`} className="destaque-white">Assistir</a>
